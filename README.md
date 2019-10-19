@@ -1,6 +1,6 @@
 # Install KubeSphere on Existing Kubernetes Cluster
 
-> English | [中文](README_zh.md)
+> English 
 
 In addition to supporting deploy on VM and BM, KubeSphere also supports installing on cloud-hosted and on-premises Kubernetes clusters,
 
@@ -264,3 +264,5 @@ If you need any help with KubeSphere, please join us at [Slack Channel](https://
 
 - Support multiple public cloud and private cloud, network plug-ins and storage plug-ins.
 - All components are designed to be loosely-coupled, and all features are pluggable. Installation will become very light and fast.
+## Add cluster-roles
+https://kubernetes.io/docs/reference/access-authn-authz/rbac/#kubectl-create-clusterrolebinding
