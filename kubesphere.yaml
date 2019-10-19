@@ -1,0 +1,28 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+#  environment:
+#    HELM-TLS-CERT: /root/helm-certs/helm.crt
+#    HELM-TLS-CA-CERT: /root/helm-certs/ca.cert.pem
+#    HELM-TLS-KEY: /root/helm-certs/helm.key 
+  roles:
+    - kubesphere-defaults
+    - ks-devops/sonarqube
+    - openpitrix
+    - prepare/base
+    - { role: metrics-server, when: "metrics_server_enable == true" }
+    - ingress
+    - ks-account
+    - ks-apigateway
+    - ks-controller-manager
+    - ks-devops/s2i
+    - ks-monitor
+    - ks-logging
+    - ks-console
+    - ks-devops/ks-devops
+    - ks-notification
+    - ks-alerting
+    - ks-devops/jenkins
+    - ks-apiserver
+    - { role: ks-istio, when: "istio_enable == true" }
